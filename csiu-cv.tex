@@ -1,0 +1,166 @@
+% LaTeX file for resume
+% This file uses the resume document class (res.cls)
+
+\documentclass{res}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font
+\newsectionwidth{0pt}  % So the text is not indented under section headings
+\usepackage{fancyhdr}  % use this package to get a 2 line header
+\renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
+\setlength{\headheight}{24pt} % allow room for 2-line header
+\setlength{\headsep}{24pt}  % space between header and text
+\setlength{\headheight}{24pt} % allow room for 2-line header
+\pagestyle{fancy}     % set pagestyle for document
+\rhead{ {\it csiu}\\{\it p. \thepage} } % put text in header (right side)
+\cfoot{}                                     % the foot is empty
+\topmargin=-0.5in % start text higher on the page
+
+\usepackage{fontawesome}
+
+\begin{document}
+
+\thispagestyle{empty} % this page has no header
+\name{\huge{Celia Siu}\\[4pt]}% the \\[12pt] adds a blank line after name
+\address{
+  % \centerline{\faMobile{ } \faEnvelopeO{ }}\\
+  % \centerline{\faLinkedinSquare{ https://ca.linkedin.com/in/celiasiu}}\\
+  % \centerline{\faGithubSquare{ http://github.com/csiu} \faStackOverflow{ http://stackoverflow.com/users/2364901/csiu}}\\
+  \rule{\textwidth}{0.4pt}{}}
+
+\begin{resume}
+
+\section{\centerline{EDUCATION}}
+\vspace{8pt}
+{\bf Pursuing a Master's degree, Bioinformatics}\hfill Sept.2014 - Present
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item University of British Columbia, Vancouver, BC
+  \item 4 month lab rotations with Steven Jones, Wyeth Wasserman, and Denise Daley
+  \item Thesis supervisor: Dr. Steven Jones
+\end{itemize}
+
+{\bf Bachelor of Science, Biochemistry}\hfill Sept.2008 -- May.2013
+\begin{itemize} \itemsep -2pt
+  \item University of British Columbia, Vancouver, BC
+  \item Completed the Co-operative Education Program
+\end{itemize}
+
+\vspace{0.15in}
+\begin{center}
+  \section{\centerline{AWARDS}}
+  \vspace{8pt}
+  \begin{tabular}{l}
+    2016 \faTrophy{} CEEHRC Travel Award\\[1ex]
+    2016 \faTrophy{} John Bosdet Memorial Fund\\[1ex]
+    2015 \faTrophy{} NSERC Canada Graduate Scholarship Master's Award\\[1ex]
+    2014 \faTrophy{} CIHR Strategic Training in Health Research in Bioinformatics Award\\[1ex]
+    2013 \faTrophy{} NSERC Undergraduate Student Research Award (USRA)\\[1ex]
+    2008 \faTrophy{} UBC President's Entrance Scholarship\\[1ex]
+  \end{tabular}
+\end{center}
+
+\vspace{0.05in}
+\section{\centerline{PUBLICATIONS}}
+
+Co-authored in:
+\vspace{4pt}
+\begin{list}{}
+{\leftmargin=3em \itemindent=-1em}
+  \item[$\bullet$] McPherson et al. (2016) Divergent modes of clonal spread and intraperitoneal mixing in high-grade serous ovarian cancer. {\sl Nature Genetics}. doi:10.1038/ng.3573
+  \item[$\bullet$] Eirew et al. (2015) Dynamics of genomic clones in breast cancer patient xenografts at single-cell resolution. {\sl Nature, 518}(7539):422-6. doi: 10.1038/nature13952
+  \item[$\bullet$] Leon et al. (2012) Application and evaluation of automated methods to extract neuroanatomical connectivity statements from free text. {\sl Bioinformatics, 28}(22):2963-70. doi: 10.1093/bioinformatics/bts542
+\end{list}
+
+Acknowledged in:
+\vspace{4pt}
+\begin{list}{}
+{\leftmargin=3em \itemindent=-1em}
+  \item[$\bullet$] Zoubarev et al. (2012) Gemma: a resource for the reuse, sharing and meta-analysis of expression profiling data. {\sl Bioinformatics, 28}(17):2272-3. doi: 10.1093/bioinformatics/bts430
+\end{list}
+
+\vspace{0.2in}
+\section{\centerline{PRESENTATIONS}}
+\vspace{4pt}
+\begin{center}
+Poster presentation, Intelligent Systems for Molecular Biology (ISMB) 2016 Conference\hfill July 9 \& 10, 2016\\[.75ex]
+Poster presentation, BTP/IOP/GSAT 2016 Retreat\hfill March 11, 2016\\[.75ex]
+% Characterization of the normal reference thyroid epigenome
+Oral presentation, Bioinformatics Research Rotation Presentation\hfill July 24, 2015\\[.75ex]
+% Literature-based knowledge discovery of Biomedical Text\\
+Oral presentation, Bioinformatics Research Rotation Presentation\hfill March 27, 2015\\[.75ex]
+% miRNA promoter recognition with CAGE and sRNA-seq
+Oral presentation, Bioinformatics Research Rotation Presentation\hfill November 28, 2014\\[.75ex]
+% Primer Data Extraction and Blast API
+\end{center}
+
+\pagebreak
+% \vspace{0.2in}
+\section{\centerline{EMPLOYMENT HISTORY}}
+\vspace{8pt}
+{\bf BCCRC $|$ The University of British Columbia}\hfill Jan.2014 -- Aug.2014\\
+{\sl Research Assistant at the Shah Lab}
+\begin{itemize} \itemsep -2pt
+  \item Wrote Bash, Python, and R scripts for downstream analysis and pipeline development
+  \item Produced figures and limited text suitable for scientific manuscripts
+  \item Leveraged parallel computing for analyses on a compute cluster to increase efficiency and decrease runtime
+\end{itemize}
+
+{\bf BCCRC $|$ Provincial Health Services Authority}\hfill Sept.2013 -- Dec.2013\\
+{\sl Research Intern at the Shah Lab}
+\begin{itemize} \itemsep -2pt
+  \item Ran automated analysis pipelines for data processing and data generation
+  \item Wrote Bash and Python scripts to rename files, parse data, and wrap third party software
+  \item Documented observations and comments on platforms such as the Atlassian Confluence Wiki, Atlassian Jira issue tracker, and Atlassian Stash Git management system
+\end{itemize}
+
+{\bf NSERC Undergraduate Student Research Award (USRA)}\hfill May.2013 -- Aug.2013\\
+{\sl Undergraduate Summer Research Student in the UBC Department of Statistics}
+\begin{itemize} \itemsep -2pt
+  \item Contributed to the development of an R toolkit for the management and delivery of data analytic course and research material
+  \item Organized, within a budget, a small meet-and-greet coffee social to acquaint oneself with the UBC Statistics NSERC-USRA students and their supervisors
+\end{itemize}
+
+{\bf UBC Centre for High-throughput Biology}\hfill May.2012 -- Aug.2012\\
+{\sl Linux System Administrator Assistant}
+\begin{itemize} \itemsep -2pt
+  \item Created and updated documentation and protocols for internal use and for end users
+  \item Created and setup user accounts on desktops, servers, and wikis
+  \item Used a variety of softwares -- including Nagios, Bacula, and CFengine -- to monitor, backup, and perform system administrative jobs
+  \item Provided troubleshooting services for users and kept record of the issues, challenges, solutions in Request Tracker
+\end{itemize}
+
+{\bf UBC Centre for High-throughput Biology}\hfill Sept.2011 -- Apr.2012\\
+{\sl Bioinformatics Research Assistant at the Pavlidis Lab}
+\begin{itemize} \itemsep -2pt
+  \item Independently processed and checked the quality of microarray data for the FishManOmics project headed by the Department of Fisheries and Oceans Canada
+  \item Paid attention to detail to analyze, annotate, and curate Gene Expression Omnibus (GEO) datasets that were to be imported into the Gemma database
+  \item Reported issues based on continuous evaluation of lab software (e.g. Gemma) across multiple operating systems including Linux, Windows, and Mac OS
+\end{itemize}
+
+{\bf Biofine International Inc.}\hfill May.2011 -- Aug.2011\\
+{\sl Organic Chemistry Synthesis Laboratory Assistant}
+\begin{itemize} \itemsep -2pt
+  \item Verbally communicated with supervisors to receive instructions for the execution of experiments
+  \item Researched, experimented, and evaluated the method of Marfey's reaction for enantiomeric resolution of amino acids
+  \item Multitasked in coordination between executing experiments, keeping records, restocking supplies, and cleaning glassware
+\end{itemize}
+
+% {\bf A\&W Food Services of Canada}, {\sl Cashier}\hfill July.2007 -- Oct.2010\\
+% {\bf Pacific National Exhibition}, {\sl Concessions Attendant}\hfill Aug.2006, Aug.2007, Aug.2008, Aug.2009\\
+
+\vspace{0.2in}
+\section{\centerline{VOLUNTEER EXPERIENCE}}
+\vspace{4pt}
+\begin{center}
+{\sl Wayfinder}, {\bf St. Paul's Hospital}\hfill Feb.2013 -- Apr.2013\\[.5ex]
+{\sl Healthy Heart Resource Centre Clerk}, {\bf St. Paul's Hospital}\hfill May.2013 -- Aug.2013\\[.5ex]
+\end{center}
+
+% \vspace{0.2in}
+% \section{\centerline{COMPUTING SKILLS}}
+% \vspace{2pt}
+% \begin{center}
+%   Experienced in R, Python, Bash shell scripting, Emacs, Git/Github, HTML, LaTeX, Unix/Linux, Mac, Windows, Microsoft Word/Excel/PowerPoint, Trouble-shooting
+% \end{center}
+
+\end{resume}
+\end{document}
