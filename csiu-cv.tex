@@ -16,6 +16,9 @@
     \centerline{http://csiu.github.io}\\
   \rule{\textwidth}{0.4pt}{}}
 
+% Format date
+\usepackage[yyyymmdd]{datetime}
+% \renewcommand{\dateseparator}{--}
 
 % Customize spacing
 \newsectionwidth{0pt}  % So the text is not indented under section headings
@@ -30,7 +33,11 @@
 \setlength{\headsep}{24pt}    % space between header and text
 % - Define headers and footers
 \rhead{ {\it csiu}\\{\it p. \thepage} }
-\cfoot{}
+\cfoot{ {\it Curriculum Vitae - \today} }
+% \fancypagestyle{firstpage}{% set header & footer on first page
+%   \rhead{}
+%   \cfoot{ {\it Curriculum Vitae - \today} }
+% }
 
 % Enable use of packages
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
@@ -82,6 +89,7 @@
 \begin{resume}
 
 \thispagestyle{empty} % no header on first page
+% \thispagestyle{firstpage}
 
 % ------------------------------------------------------------------------------
 \section{Education}
