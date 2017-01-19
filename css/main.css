@@ -1,0 +1,20 @@
+body, table {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 20px;
+  color: #404040;
+  line-height: 1.2;
+}
+body {
+  padding: 0 2.5em 0 2.5em;
+}
+li p {
+  margin: 0;
+  padding: 0.1em;
+}
+p + ul {
+  margin-top: -10px;
+}
+h1 {
+  font-size: 36px;
+  margin-top: 1.2em;
+}
