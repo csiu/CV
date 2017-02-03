@@ -41,6 +41,12 @@
 % Enable link
 \usepackage{hyperref}
 
+% Enable condition ifthenelse
+\usepackage{ifthen}
+
+% Enable spacing
+\usepackage{scrextend}
+
 % ------------------------------------------------------------------------------
 % Customizations - pt.2
 
@@ -66,13 +72,24 @@
 
 % - Volunteer line
 \newcommand{\linevolunteer}[3]{%
-  {\sl #3}, {\bf #2} \hfill #1\\[.5ex]}
+  {\sl #3}, {\bf #2} \hfill #1}%\\[.5ex]}
 
 % - define new environment for publications
 \newenvironment{publicationlists}{%
   \begin{itemize}\leftmargin=3em \itemindent=-1em \itemsep=2pt%
   }{%
   \end{itemize}}
+
+% - Define achievement & awards section
+\newcommand{\awarditem}[3]{%
+  \ifthenelse{\equal{#2}{}}
+    {{\bf #1}}
+    {{\bf #1}\hfill#2}
+    \\ \vspace{-1em}
+    \begin{addmargin}[2em]{3em}% 2em left, 3em right
+    #3
+    \end{addmargin}
+    }
 
 % - update itemize have smaller itemsep
 \let\olditemize\itemize
@@ -91,75 +108,49 @@
 
 % ------------------------------------------------------------------------------
 \section{Education}
-\linehead{Pursuing a Master's degree, Bioinformatics}{Sept.2014 - Present}\vspace{-8pt}
+\linehead{Master of Science, Bioinformatics (In progress)}{Sept.2014 -- Present}\vspace{-8pt}
 \begin{itemize}
   \item University of British Columbia, Vancouver, BC
-  \item Supervised by Dr. Steven Jones at the Genome Sciences Centre, BC Cancer Agency
-  \item 4 month lab rotations with Steven Jones, Wyeth Wasserman, and Denise Daley
+  \item I was funded by CIHR and the CGS-M (see Awards section)
+  \item Expected graduation, May 2017 (but expected completion is March 2017)
 \end{itemize}
 
-\linehead{Bachelor of Science, Biochemistry}{Sept.2008 -- May.2013}\vspace{-8pt}
+\linehead{Bachelor of Science, Biochemistry (2013)}{}\vspace{-8pt}
 \begin{itemize}
   \item University of British Columbia, Vancouver, BC
   \item Completed the Co-operative Education Program
 \end{itemize}
 
 % ------------------------------------------------------------------------------
-\section{M.Sc. Thesis Project}
-``Characterization of the normal thyroid reference epigenome"\\
-In this study, we compare the consistency of chromatin state annotations across the epigenomes from the grossly uninvolved tumour-adjacent thyroid tissue of 4 human individuals using ChIP-sequencing and RNA-sequencing data. We examine 6 histone modifications, identify chromatin states using hidden Markov models, produce a new metric for model selection, and establish epigenomic maps of 19 chromatin states.
+\section{Projects}
+\linehead{Characterization of the human thyroid epigenome}{Sept.2015 -- Present}
+\linetitle{Jones Lab, Michael Smith Genome Sciences Centre}
+\begin{itemize}
+  \item Modelled chromatin states from epigenetic features using hidden Markov models to produce 26 candidate models
+  \item Developed a new model selection criterion
+  \item Used Makefiles to create pipelines, organize code, and rerun analyses
+\end{itemize}
 
-% ------------------------------------------------------------------------------
-\section{Awards}
+\linehead{Literature-based knowledge discovery of biomedical text}{May.2015 -- Aug.2015}
+\linetitle{Jones Lab, Michael Smith Genome Sciences Centre}
+\begin{itemize}
+  \item Contributed to the development of text mining and machine learning approaches to prioritize therapeutics from Medline abstracts and the full-text of open access papers
+  \item Visualized the output of MySQL database queries in R and D3
+\end{itemize}
 
-\begin{center}
-  \begin{tabular}{l}
-    \lineaward{2016}{CEEHRC Travel Award (\$1000)}
-    \lineaward{2016}{John Bosdet Memorial Fund}
-    \lineaward{2015}{Canada Graduate Scholarship Master's Award\\
-      \hspace{1.25cm}\footnotesize{(the CGS-M is a non-renewable award valued at \$17,500 for 12 months)}}
-    \lineaward{2014}{CIHR Strategic Training in Health Research in Bioinformatics Award\\
-      \hspace{1.25cm}\footnotesize{(\$22,000/yr for 2 yrs)}}
-    \lineaward{2013}{NSERC Undergraduate Student Research Award}
-    \lineaward{2008}{UBC President's Entrance Scholarship (\$2000)}
-  \end{tabular}
-\end{center}
-\vspace{-1em}
+\linehead{miRNA promoter recognition with CAGE and sRNA-seq}{Jan.2015 -- Apr.2015}
+\linetitle{Wasserman Lab, Centre for Molecular Medicine and Therapeutics}
+\begin{itemize}
+  \item Modified a miRNA promoter recognition method to include a new feature in Python
+  \item Evaluated a semi supervised statistical model trained on CAGE data, DNA sequence features, and sRNA-sequencing data
+\end{itemize}
 
-% ------------------------------------------------------------------------------
-\section{Publications}
-
-Co-authored in:\vspace{4pt}
-\begin{publicationlists}
-  \item McPherson et al. (2016) Divergent modes of clonal spread and intraperitoneal mixing in high-grade serous ovarian cancer. {\sl Nature Genetics}. doi:10.1038/ng.3573
-  \item Eirew et al. (2015) Dynamics of genomic clones in breast cancer patient xenografts at single-cell resolution. {\sl Nature, 518}(7539):422-6. doi: 10.1038/nature13952
-  \item Leon et al. (2012) Application and evaluation of automated methods to extract neuroanatomical connectivity statements from free text. {\sl Bioinformatics, 28}(22):2963-70. doi: 10.1093/bioinformatics/bts542
-\end{publicationlists}
-
-Acknowledged in:\vspace{4pt}
-\begin{publicationlists}
-  \item Zoubarev et al. (2012) Gemma: a resource for the reuse, sharing and meta-analysis of expression profiling data. {\sl Bioinformatics, 28}(17):2272-3. doi: 10.1093/bioinformatics/bts430
-\end{publicationlists}
-
-% ------------------------------------------------------------------------------
-\section{Presentations}
-
-\linepresentation{July 9 \& 10, 2016}{%
-  Bioinformatic characterization of the normal thyroid reference epigenome}{%
-  Poster presentation, Intelligent Systems for Molecular Biology (ISMB) 2016 Conference}
-\linepresentation{March 11, 2016}{%
-  Characterization of the normal reference thyroid epigenome}{%
-  Poster presentation, BTP/IOP/GSAT 2016 Retreat}
-% \linepresentation{July 24, 2015}{%
-%   Literature-based knowledge discovery of Biomedical Text}{%
-%   Oral presentation, Bioinformatics Research Rotation Presentation}
-% \linepresentation{March 27, 2015}{%
-%   miRNA promoter recognition with CAGE and sRNA-seq}{%
-%   Oral presentation, Bioinformatics Research Rotation Presentation}
-% \linepresentation{November 28, 2014}{%
-%   Primer Data Extraction and Blast API}{%
-%   Oral presentation, Bioinformatics Research Rotation Presentation}
-\vspace{-1.5em}
+\linehead{Primer Data Extraction \& Blast API}{Sept.2014 -- Dec.2014}
+\linetitle{Daley Lab, Centre for Heart Lung Innovation}
+\begin{itemize}
+  \item Used data mining to extract primers sequences from academic papers
+  \item Made API calls to programmatically submit BLAST searches of primer sequences
+\end{itemize}
 
 % ------------------------------------------------------------------------------
 \section{Employment history}
@@ -169,39 +160,38 @@ Acknowledged in:\vspace{4pt}
 \begin{itemize}
   \item Wrote Bash, Python, and R scripts for downstream analysis and pipeline development
   \item Produced figures and limited text suitable for scientific manuscripts
-  \item Leveraged parallel computing for analyses on a compute cluster to increase efficiency and decrease runtime
+  \item Optimized analyses by leveraging parallel computing on compute clusters
 \end{itemize}
 
 \linehead{BCCRC $|$ Provincial Health Services Authority}{Sept.2013 -- Dec.2013}
 \linetitle{Research Intern at the Shah Lab}
 \begin{itemize}
   \item Ran automated analysis pipelines for data processing and data generation
-  \item Wrote Bash and Python scripts to rename files, parse data, and wrap third party software
-  \item Documented observations and comments on platforms such as the Atlassian Confluence Wiki, Atlassian Jira issue tracker, and Atlassian Stash Git management system
+  \item Wrote scripts to rename files, parse data, and wrap third party software
+  \item Documented protocols, results, and comments on platforms such as the Atlassian Confluence wiki and Jira issue tracker
 \end{itemize}
 
-\linehead{NSERC Undergraduate Student Research Award (USRA)}{May.2013 -- Aug.2013}
+\linehead{NSERC Undergraduate Student Research Award}{May.2013 -- Aug.2013}
 \linetitle{Undergraduate Summer Research Student in the UBC Department of Statistics}
 \begin{itemize}
-  \item Contributed to the development of an R toolkit for the management and delivery of data analytic course and research material
-  \item Organized, within a budget, a small meet-and-greet coffee social to acquaint oneself with the UBC Statistics NSERC-USRA students and their supervisors
+  \item Contributed to the collaborative development of an R package using Git and Github
+  \item Validated code integrity by writing and running unit tests
 \end{itemize}
 
 \linehead{UBC Centre for High-throughput Biology}{May.2012 -- Aug.2012}
-\linetitle{Linux System Administrator Assistant}
+\linetitle{System Administrator Assistant}
 \begin{itemize}
-  \item Created and updated documentation and protocols for internal use and for end users
-  \item Created and setup user accounts on desktops, servers, and wikis
-  \item Used a variety of softwares -- including Nagios, Bacula, and CFengine -- to monitor, backup, and perform system administrative jobs
-  \item Provided troubleshooting services for users and kept record of the issues, challenges, solutions in Request Tracker
+  \item Produced and updated protocols for internal use and for end users
+  \item Setup user accounts on desktops, servers, and wikis
+  \item Monitored, backed up, and performed various system administrative tasks using Nagios, Bacula, CFengine, and Request Tracker
 \end{itemize}
 
 \linehead{UBC Centre for High-throughput Biology}{Sept.2011 -- Apr.2012}
 \linetitle{Bioinformatics Research Assistant at the Pavlidis Lab}
 \begin{itemize}
-  \item Independently processed and checked the quality of microarray data for the FishManOmics project headed by the Department of Fisheries and Oceans Canada
-  \item Paid attention to detail to analyze, annotate, and curate Gene Expression Omnibus (GEO) datasets that were to be imported into the Gemma database
-  \item Reported issues based on continuous evaluation of lab software (e.g. Gemma) across multiple operating systems including Linux, Windows, and Mac OS
+  \item Annotated Gene Expression Omnibus datasets that were to be imported with ontology terms
+  \item Evaluated software across multiple operating systems and reported issues on BugZilla
+  \item Assessed the quality of microarray data for the FishManOmics project headed by the Department of Fisheries and Oceans Canada
 \end{itemize}
 
 % \linehead{Biofine International Inc.}{May.2011 -- Aug.2011}
@@ -218,18 +208,42 @@ Acknowledged in:\vspace{4pt}
 % \linehead{Pacific National Exhibition}{Aug.2006, Aug.2007, Aug.2008, Aug.2009}
 % \linetitle{Concessions Attendant}
 
+% ------------------------------------------------------------------------------
+\section{Achievements \& Awards}
+\awarditem{%
+  CEEHRC Travel Award recipient}{%
+  Jun.2016}{%
+  Awarded \$1,000 for the cost of travel to present at the ISMB 2016 conference in Orlando, Florida.}
+\awarditem{%
+  Canada Graduate Scholarship Master’s Award (CGS-M) recipient}{%
+  Sept.2015}{%
+  Administered by the Tri-Council Agencies (NSERC, SSHRC, CIHR), the CGS-M is a one year, non-renewable research training award valued at \$17,500 to support students who demonstrate a high standard of achievement in undergraduate and early graduate studies.}
+\awarditem{%
+  CIHR Strategic Training in Health Research Award recipient}{%
+  Sept.2014}{%
+  Awarded a two-year (\$22,000/year) funding for M.Sc. training in Bioinformatics.}
+\awarditem{%
+  Co-authored in 3 research papers}{}{
+  Publications listed at \url{https://scholar.google.ca/citations?user=JYYNokd_16EC&hl=en}}
+
+
 % -----------------------------------------------------------------------------
 \section{Volunteer experience}
 
-\linevolunteer{Oct.2016}{%
+\linevolunteer{Oct.2016 \& Feb.2017}{%
   Software Carpentry workshop}{%
   Helper}
-\linevolunteer{Feb.2013 -- Apr.2013}{%
+\begin{itemize}
+  \item Troubleshot and helped students learn Git, GitHub, Bash, Python, and Jupyter Notebook
+\end{itemize}
+
+\linevolunteer{Feb.2013 -- Aug.2013}{%
   St. Paul's Hospital}{%
-  Wayfinder}
-\linevolunteer{May.2013 -- Aug.2013}{%
-  St. Paul's Hospital}{%
-  Healthy Heart Resource Centre Clerk}
+  Wayfinder \& Healthy Heart Resource Centre Clerk}
+\begin{itemize}
+  \item Approached, greeted, and helped patients and visitors find their way
+  \item Welcomed and provided visitors to the resource centre information and assistance
+\end{itemize}
 
 % -----------------------------------------------------------------------------
 % \section{Computing skills}
