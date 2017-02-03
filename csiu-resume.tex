@@ -28,9 +28,9 @@
 \rhead{ {\it csiu}\\{\it p. \thepage} }
 \cfoot{%
   \rule{\textwidth}{0.4pt}{}
-  \faLinkedinSquare{ https://ca.linkedin.com/in/celiasiu }\\
-  \faGithubSquare{ http://github.com/csiu }\\
-  \faStackOverflow{ http://stackoverflow.com/users/2364901/csiu }
+  \faLinkedinSquare{ \url{https://ca.linkedin.com/in/celiasiu} }\\
+  \faGithubSquare{ \url{http://github.com/csiu} }\\
+  \faStackOverflow{ \url{http://stackoverflow.com/users/2364901/csiu} }
 }
 
 % Enable use of packages
@@ -38,6 +38,8 @@
 %\usepackage{newcent}   % uses new century schoolbook postscript font
 \usepackage{fontawesome}
 
+% Enable link
+\usepackage{hyperref}
 
 % ------------------------------------------------------------------------------
 % Customizations - pt.2
@@ -76,6 +78,9 @@
 \let\olditemize\itemize
 \renewcommand{\itemize}{%
   \olditemize\addtolength{\itemsep}{-4pt}}
+
+% - url to roman (serif) font
+\urlstyle{rm}
 
 
 % ==============================================================================
