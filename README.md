@@ -1,5 +1,5 @@
-```
-pandoc --from=latex --to=html -c css/main.css csiu-cv.tex
-```
+# csiu's CV
 
-Is used to produce the HTML version of my CV (available at: https://csiu.github.io/CV/)
+A printable copy of my CV is available at https://csiu.github.io/CV/csiu-cv.pdf
+
+I have also produced a HTML version at https://csiu.github.io/CV/
