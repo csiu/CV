@@ -6,9 +6,9 @@
 \name{\Huge{Celia Siu}\\[4pt]}
 \address{%
   \centerline{%
-    \faMobile{ \cellphone }%
-    \faEnvelopeO{ \email }}\\%
-    \centerline{ csiu.github.io }\\
+    \faEnvelopeO{ \email }%
+    \faMobile{ \cellphone }}\\%
+    \centerline{ \where $|$ \url{csiu.github.io} }\\
   \rule{\textwidth}{0.4pt}{}}
 
 
@@ -25,10 +25,10 @@
 \setlength{\headsep}{24pt}    % space between header and text
 \setlength{\footskip}{0pt}
 % - Define headers and footers
-\rhead{ {\it csiu}\\{\it p. \thepage} }
+\rhead{}% {\it csiu}\\{\it p. \thepage} }
 \cfoot{%
   \rule{\textwidth}{0.4pt}{}
-  \faLinkedinSquare{ \url{https://ca.linkedin.com/in/celiasiu} }\\
+  \faLinkedinSquare{ \url{https://ca.linkedin.com/in/celiasiu} }
   \faGithubSquare{ \url{http://github.com/csiu} }\\
   \faStackOverflow{ \url{http://stackoverflow.com/users/2364901/csiu} }
 }
@@ -105,147 +105,72 @@
 \begin{document}
 \begin{resume}
 
-\thispagestyle{empty} % no header on first page
+% \thispagestyle{empty} % no header on first page
 
 % ------------------------------------------------------------------------------
-\section{Education}
-\linehead{Master of Science, Bioinformatics (In progress)}{Sept.2014 -- Present}\vspace{-8pt}
+\vspace{-1em}
+\begin{center}
+  {\it MSc in Computational Biology with experience in Data Science, Machine Learning, and Text Mining.}
+\end{center}
+\vspace{-1.5em}
+
+\section{Projects in Data science}
+
+\linehead{100 Days of Code}{Present}
+\linetitle{See my technical blog: \url{http://csiu.github.io/blog/tag/100daysofcode}}
 \begin{itemize}
-  \item University of British Columbia, Vancouver, BC
-  \item Funded by CIHR and the CGS-M (see Awards section)
-  \item Expected graduation, May 2017
+  \item Used machine learning methods from Scikit-learn to build models and enter Kaggle competitions
+  \item Acquired and analyzed data using Jupyter Notebooks in Python (eg. Pandas, Matplotlib)
 \end{itemize}
 
-\linehead{Bachelor of Science, Biochemistry (2013)}{}\vspace{-8pt}
+\linehead{MSc thesis: Characterization of the human thyroid epigenome}{Sept 2015 -- Present}
+\linetitle{Michael Smith Genome Sciences Centre, Jones Lab}
 \begin{itemize}
-  \item University of British Columbia, Vancouver, BC
-  \item Completed the Co-operative Education Program
+  \item Modelled chromatin states from epigenetic features using hidden Markov models
+  \item Developed a new quantitative metric for model selection
 \end{itemize}
 
-% ------------------------------------------------------------------------------
-\section{Projects}
-\linehead{100 Days of Code Challenge}{Feb.2017 -- Present}
-\linetitle{A personal project - \url{http://csiu.github.io/blog/tag/100daysofcode/}}
+\linehead{Literature-based knowledge discovery of biomedical text}{May 2015 -- Aug 2015}
+\linetitle{Michael Smith Genome Sciences Centre, Jones Lab}
 \begin{itemize}
-  \item Used machine learning functions from Scikit-learn to enter Kaggle competitions
-  \item Explored data in D3 and in Jupyter Notebooks using Python and
-  Python packages such as Pandas and Matplotlib
+  \item Developed text mining/machine learning approaches to prioritize therapeutics from unstructured text
+  \item Created data visualizations in R and JavaScript (D3) from data stored in a MySQL database
 \end{itemize}
 
-\linehead{Characterization of the human thyroid epigenome}{Sept.2015 -- Present}
-\linetitle{Jones Lab, Michael Smith Genome Sciences Centre}
+\section{Work Experience}
+
+{\bf Computational Biology Research Assistant} \hfill Sept 2013 -- Aug 2014\\
+{\it BC Cancer Agency, Shah Lab}
 \begin{itemize}
-  \item Modelled chromatin states from epigenetic features using hidden Markov models to produce 26 candidate models
-  \item Developed a new model selection criterion
-  \item Used Makefiles to create pipelines, organize code, and rerun analyses
+  \item Wrote Python and R scripts to preprocess data, develop pipelines, and wrap third party software
+  \item Produced data visualizations and limited text suitable for scientific manuscripts
+  \item Initiated pipelines on compute clusters to generate data for downstream analysis
+  \item Following an internship, promoted to full-time
 \end{itemize}
 
-\linehead{Literature-based knowledge discovery of biomedical text}{May.2015 -- Aug.2015}
-\linetitle{Jones Lab, Michael Smith Genome Sciences Centre}
-\begin{itemize}
-  \item Contributed to the development of text mining and machine learning approaches to prioritize therapeutics from Medline abstracts and the full-text of open access papers
-  \item Visualized the output of MySQL database queries in R and D3
-\end{itemize}
-
-\linehead{miRNA promoter recognition with CAGE and sRNA-seq}{Jan.2015 -- Apr.2015}
-\linetitle{Wasserman Lab, Centre for Molecular Medicine and Therapeutics}
-\begin{itemize}
-  \item Modified a miRNA promoter recognition method to include a new feature in Python
-  \item Evaluated a semi supervised statistical model trained on CAGE data, DNA sequence features, and sRNA-sequencing data
-\end{itemize}
-
-\linehead{Primer Data Extraction \& Blast API}{Sept.2014 -- Dec.2014}
-\linetitle{Daley Lab, Centre for Heart Lung Innovation}
-\begin{itemize}
-  \item Used data mining to extract primers sequences from academic papers
-  \item Made API calls to programmatically submit BLAST searches of primer sequences
-\end{itemize}
-
-% ------------------------------------------------------------------------------
-\section{Employment history}
-
-\linehead{BC Cancer Agency, UBC}{Jan.2014 -- Aug.2014}
-\linetitle{Research Assistant at the Shah Lab, BC Cancer Agency}
-\begin{itemize}
-  \item Wrote Bash, Python, and R scripts for downstream analysis and pipeline development
-  \item Produced figures and limited text suitable for scientific manuscripts
-  \item Optimized analyses by leveraging parallel computing on compute clusters
-\end{itemize}
-
-\linehead{BC Cancer Agency, PHSA}{Sept.2013 -- Dec.2013}
-\linetitle{Research Intern at the Shah Lab, BC Cancer Agency}
-\begin{itemize}
-  \item Ran automated analysis pipelines for data processing and data generation
-  \item Wrote scripts to rename files, parse data, and wrap third party software
-  \item Documented protocols, results, and comments on platforms such as the Atlassian Confluence wiki and Jira issue tracker
-\end{itemize}
-
-\linehead{NSERC Undergraduate Student Research Award}{May.2013 -- Aug.2013}
-\linetitle{Undergraduate Summer Research Student in the UBC Department of Statistics}
+{\bf Undergraduate Research Student} \hfill May 2013 -- Aug 2013\\
+{\it UBC Department of Statistics}
 \begin{itemize}
   \item Contributed to the collaborative development of an R package using Git and Github
-  \item Validated code integrity by writing and running unit tests
+  \item Wrote unit tests in accordance with best coding practices in software development
 \end{itemize}
 
-\linehead{UBC Centre for High-throughput Biology}{May.2012 -- Aug.2012}
-\linetitle{System Administrator Assistant}
-\begin{itemize}
-  \item Produced and updated protocols for internal use and for end users
-  \item Setup user accounts on desktops, servers, and wikis
-  \item Monitored, backed up, and performed various system administrative tasks using Nagios, Bacula, CFengine, and Request Tracker
-\end{itemize}
-
-\linehead{UBC Centre for High-throughput Biology}{Sept.2011 -- Apr.2012}
-\linetitle{Bioinformatics Research Assistant at the Pavlidis Lab}
-\begin{itemize}
-  \item Annotated Gene Expression Omnibus datasets that were to be imported with ontology terms
-  \item Evaluated software across multiple operating systems and reported issues on BugZilla
-  \item Assessed the quality of microarray data for the FishManOmics project headed by the Department of Fisheries and Oceans Canada
-\end{itemize}
-
-% \linehead{Biofine International Inc.}{May.2011 -- Aug.2011}
-% \linetitle{Organic Chemistry Synthesis Laboratory Assistant}
-% \begin{itemize}
-%   \item Verbally communicated with supervisors to receive instructions for the execution of experiments
-%   \item Researched, experimented, and evaluated the method of Marfey's reaction for enantiomeric resolution of amino acids
-%   \item Multitasked in coordination between executing experiments, keeping records, restocking supplies, and cleaning glassware
-% \end{itemize}
-
-% \linehead{A\&W Food Services of Canada}{July.2007 -- Oct.2010}
-% \linetitle{Cashier}
-
-% \linehead{Pacific National Exhibition}{Aug.2006, Aug.2007, Aug.2008, Aug.2009}
-% \linetitle{Concessions Attendant}
-
-% -----------------------------------------------------------------------------
 \section{Volunteer experience}
-\linevolunteer{Oct.2016 \& Feb.2017}{%
+\linevolunteer{Oct 2016 \& Feb 2017}{%
   Software Carpentry workshop}{%
-  Helper}
+  Volunteer}
 \begin{itemize}
   \item Troubleshot and helped students learn Git, GitHub, Bash, Python, and Jupyter Notebook
 \end{itemize}
 
-% ------------------------------------------------------------------------------
-\section{Achievements \& Awards}
-\awarditem{%
-  CEEHRC Travel Award recipient}{%
-  Jun.2016}{%
-  Awarded \$1,000 for the cost of travel to present at the ISMB 2016 conference in Orlando, Florida.}
-\awarditem{%
-  Canada Graduate Scholarship Master’s Award (CGS-M) recipient}{%
-  Sept.2015}{%
-  Awarded a one year, non-renewable research training award valued at \$17,500.}
-\awarditem{%
-  CIHR Strategic Training in Health Research Award recipient}{%
-  Sept.2014}{%
-  Awarded a two-year (\$22,000/year) funding for M.Sc. training in Bioinformatics.}
-\awarditem{%
-  Co-authored in 3 published journal articles}{}{}
-\vspace{-0.5em}
-
-% -----------------------------------------------------------------------------
-\section{Primary Reference/Supervisor}
+\section{Education}
+\linehead{Master of Science, Computational Biology}{Sept 2014 -- Present}
+University of British Columbia, Vancouver, BC
+\begin{itemize}
+  \item 10\% acceptance rate and awarded \$50,000+ in scholarships
+  \item Took graduate-level courses in Machine Learning, Data Mining, and Design and Analysis of Algorithms
+\end{itemize}
+\pagebreak
 
 \end{resume}
 \end{document}
